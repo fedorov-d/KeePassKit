@@ -25,6 +25,8 @@
 #import <KeePassKit/KPKFormat.h>
 #import <KeePassKit/KPKModificationRecording.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class KPKEntry;
 @class KPKGroup;
 @class KPKIcon;
@@ -51,7 +53,7 @@ typedef NS_OPTIONS(NSUInteger, KPKCopyOptions) {
 @property(nonatomic, copy) NSUUID *iconUUID;
 @property(nonatomic, readonly, strong) KPKIcon *icon;
 @property(nonatomic, readonly, copy) NSUUID *uuid;
-@property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy, nullable) NSString *title;
 @property(nonatomic, copy) NSString *notes;
 @property(nonatomic, copy) NSArray<NSString *> *tags; // FIXME: Move to NSSet?
 @property(nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> *customData;
@@ -167,3 +169,5 @@ typedef NS_OPTIONS(NSUInteger, KPKCopyOptions) {
 @property (nonatomic, readonly, copy) NSIndexPath *indexPath;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -25,6 +25,8 @@
 #import <KeePassKit/KPKModificationRecording.h>
 #import <KeePassKit/KPKPlatformIncludes.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class KPKGroup;
 @class KPKBinary;
 @class KPKAttribute;
@@ -102,8 +104,8 @@ FOUNDATION_EXTERN NSString *const KPKMetaEntryKeePassKitUserTemplates;        //
 @interface KPKEntry : KPKNode <NSCopying, NSSecureCoding>
 #endif
 
-@property (nonatomic, copy) NSString *password;
-@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy, nullable) NSString *password;
+@property (nonatomic, copy, nullable) NSString *username;
 @property (nonatomic, copy) NSString *url;
 
 @property (nonatomic, copy, readonly) NSArray<KPKBinary *> *binaries;
@@ -273,3 +275,5 @@ FOUNDATION_EXTERN NSString *const KPKMetaEntryKeePassKitUserTemplates;        //
 @property (nonatomic, readonly) NSUInteger estimatedByteSize;
 
 @end
+
+NS_ASSUME_NONNULL_END
