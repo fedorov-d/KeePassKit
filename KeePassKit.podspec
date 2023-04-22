@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
 
-  s.resources = "KeePassKit/Localization/*.lproj"
+  s.resources = "KeePassKit/Localization/*.lproj, KeePassKit/*.lproj"
 
   s.subspec 'Core' do |ss|
     ss.source_files  = "KeePassKit/**/*.{h,m}"
