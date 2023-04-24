@@ -106,7 +106,7 @@ FOUNDATION_EXTERN NSString *const KPKMetaEntryKeePassKitUserTemplates;        //
 
 @property (nonatomic, copy, nullable) NSString *password;
 @property (nonatomic, copy, nullable) NSString *username;
-@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy, nullable) NSString *url;
 
 @property (nonatomic, copy, readonly) NSArray<KPKBinary *> *binaries;
 //@property (nonatomic, copy) NSArray<NSString *> *tags;
